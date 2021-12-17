@@ -26,10 +26,10 @@ export const FocusHistory = ({ focusHistory, onClear }) => {
               <Text style={styles.txtHistory}>Hal yang sudah Anda lakukan</Text>
             </View>
             <FlatList
-              style={{ flex: 1 }}
-              contentContainerStyle={{ flex: 1, alignItems: 'center' }}
+              contentContainerStyle={{ alignItems: 'center' }}
               data={focusHistory}
               renderItem={HistoryItem}
+              keyExtractor={(item, index) => index.toString()}
             />
             <Button
               style={{ marginHorizontal: marginSizes.lg }}
